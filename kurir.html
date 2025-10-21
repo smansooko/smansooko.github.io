@@ -46,12 +46,12 @@
                     <li>
                     </li>
                     <li>
-                        <a class="btn-getstarted" href="../login/index.html">Login</a>
+                        <a class="btn-getstarted" href="login/index.html">Login</a>
                     </li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-            <a class="btn-getstarted btn-login" href="../login/index.html">Login</a>
+            <a class="btn-getstarted btn-login" href="login/index.html">Login</a>
             <a class="btn-getstarted btn-logout" href="">Logout</a>
         </div>
     </header>
@@ -249,7 +249,7 @@
 
             if (!username || role !== "kurir") {
                 alert("Anda harus login sebagai kurir untuk mengakses halaman ini!");
-                window.location.href = "../login/index.html";
+                window.location.href = "login/index.html";
                 return; // hentikan eksekusi JS lebih lanjut
             }
 
@@ -449,7 +449,7 @@
                 if (e.target.id === "logoutBtn") {
                     localStorage.removeItem("username");
                     localStorage.removeItem("role");
-                    window.location.href = "../login/index.html";
+                    window.location.href = "login/index.html";
                 }
             });
 

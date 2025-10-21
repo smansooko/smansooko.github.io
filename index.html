@@ -57,7 +57,7 @@
           <li><a href="index.html#events">Kantin</a></li>
           <li><a href="siswa.html">Pesanan Saya</a></li>
           <li><a class="btn-getstarted" href="">Logout</a></li>
-          <li><a class="btn-getstarted" href="../login/index.html">Login</a></li>
+          <li><a class="btn-getstarted" href="login/index.html">Login</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -694,7 +694,7 @@
       $(document).on("click", ".btn-primary", function () {
         if (!localStorage.getItem("isLoggedIn")) {
           alert("Silakan login terlebih dahulu!");
-          window.location.href = "../login/index.html";
+          window.location.href = "login/index.html";
           return;
         }
 
