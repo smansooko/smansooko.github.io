@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>PERUT SMANSASOO</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="MAEM.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between"
+            style="flex-direction: row;">
+
+            <a href="" class="logo d-flex align-items-center me-auto me-xl-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename" style="font-size: 3vw;">PERUT SMANSASOO</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu" style="display: none;">
+                <ul>
+                    <li>
+                    </li>
+                    <li>
+                        <a class="btn-getstarted" href="../login/index.html">Login</a>
+                    </li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <a class="btn-getstarted btn-login" href="../login/index.html">Login</a>
+            <a class="btn-getstarted btn-logout" href="">Logout</a>
+        </div>
+    </header>
+
+    <div class="container section-title">
+        <h2 style="margin-top: 3rem;">Ambil Uangmu Disini</h2>
+        <p><span>Lihat</span> <span class="description-title">Seluruh Pesanan Pembeli</span></p>
+    </div>
+
+    <main class="main">
+        <div class="container" style="margin-top: 1rem; margin-bottom: 5rem;">
+            <div class="card shadow">
+                <div class="card-body" style="margin-bottom: 9rem;">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                                aria-selected="true">Semua Pesanan</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                aria-controls="profile-tab-pane" aria-selected="false">Diambil</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                            aria-labelledby="home-tab" tabindex="0">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nomor Pesanan</th>
+                                        <th scope="col">Pembeli</th>
+                                        <th scope="col">Waktu</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- rows injected by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                            tabindex="0">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nomor Pesanan</th>
+                                        <th scope="col">Pembeli</th>
+                                        <th scope="col">Waktu</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- rows injected by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal (detail) -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-xxl-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="d-flex justify-content-between w-100">
+                            <h2 class="mb-0 fw-bold text-dark">Nomor Pesanan: 001</h2>
+                            <div>
+                                <span class="badge rounded-pill text-bg-warning fs-6">Diproses</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <!-- injected by JS -->
+                    </div>
+                    <div class="modal-footer fixed-bottom" style="background-color: white;">
+                        <!-- injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <i class="bi bi-geo-alt icon"></i>
+                    <div class="address">
+                        <h4>Alamat</h4>
+                        <p>Jalan R. Akhmad Basuni No.361, </p>
+                        <p>Dalmon Utara, Japan, Sooko, Mojokerto, Jawa Timur 61361</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <i class="bi bi-telephone icon"></i>
+                    <div>
+                        <h4>Contact</h4>
+                        <p>
+                            <strong>Telp:</strong> <span>(0321) 322637</span><br>
+                            <strong>Email:</strong> <span>info@sman1sooko.sch.id</span><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <i class="bi bi-clock icon"></i>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>
+                            <strong>Senin-Jumat:</strong> <br><span>09.55-10.20 <br> 11.35-12.20</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Follow Us</h4>
+                    <div class="social-links d-flex">
+                        <a href="https://twitter.com/search?q=%23SMANSASOO&src=hashtag_click&f=user" target="_blank"
+                            class="twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.facebook.com/sman1sooko/?locale=ar_AR" target="_blank" class="facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/humassman1sooko/reels/?__d=dist" target="_blank"
+                            class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://sman1sooko.sch.id/" target="_blank" class="linkedin"><i
+                                class="bi bi-building"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">SMANSASOO</strong> <span>Build With ❤ by dod &
+                    ces</span></p>
+        </div>
+    </footer>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="jquery.js"></script>
+
+    <!-- Custom JS (modifikasi: hanya logika, tampilan tidak diubah) -->
+    <script>
+        $(document).ready(function () {
+            const loginBtn = $("nav#navmenu a.btn-getstarted:contains('Login')");
+            const logoutBtn = $("nav#navmenu a.btn-getstarted:contains('Logout')");
+            const cartBtn = $("#cartButton");
+            const pesananSayaBtn = $("nav#navmenu a:contains('Pesanan Saya')");
+
+            function updateLoginUI() {
+                if (localStorage.getItem("isLoggedIn")) {
+                    loginBtn.hide();
+                    logoutBtn.show();
+                    pesananSayaBtn.show();
+                    $(".btn-keranjang").show();
+                } else {
+                    loginBtn.show();
+                    logoutBtn.hide();
+                    pesananSayaBtn.hide();
+                    $(".btn-keranjang").hide();
+                }
+            }
+
+            updateLoginUI();
+
+            logoutBtn.on("click", function (e) {
+                e.preventDefault();
+                localStorage.removeItem("isLoggedIn");
+                alert("Anda berhasil logout!");
+                updateLoginUI();
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // ======================= LOGIN CHECK =======================
+            const username = localStorage.getItem("username");
+            const role = (localStorage.getItem("role") || "").trim().toLowerCase();
+
+            if (!username || role !== "kurir") {
+                alert("Anda harus login sebagai kurir untuk mengakses halaman ini!");
+                window.location.href = "../login/index.html";
+                return; // hentikan eksekusi JS lebih lanjut
+            }
+
+            // ======================= ELEMENTS =======================
+            const loginBtnContainer = document.getElementById("login-container");
+            // loginBtnContainer.innerHTML = `<button class="btn-getstarted" id="logoutBtn">Logout</button>`;
+
+            let pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+
+            const tbodySemua = document.querySelector("#home-tab-pane tbody");
+            const tbodyDiambil = document.querySelector("#profile-tab-pane tbody");
+            const modalBody = document.querySelector(".modal-body");
+            const modalHeader = document.querySelector(".modal-header h2");
+            const modalStatusBadge = document.querySelector(".modal-header .badge");
+            const modalFooter = document.querySelector(".modal-footer");
+
+            const tabTrigger = new bootstrap.Tab(document.querySelector('#profile-tab'));
+
+            // ======================= HELPER FUNCTIONS =======================
+            function statusClass(status) {
+                if (status === "Dibatalkan") return "text-danger";
+                if (status === "Selesai") return "text-success";
+                if (status === "Diproses") return "text-warning";
+                if (status === "Diambil") return "text-info";
+                return "text-primary";
+            }
+
+            function savePesanan() {
+                localStorage.setItem("pesanan", JSON.stringify(pesanan));
+            }
+
+            function renderTables() {
+                tbodySemua.innerHTML = "";
+                tbodyDiambil.innerHTML = "";
+
+                if (pesanan.length === 0) {
+                    tbodySemua.innerHTML = `<tr><td colspan="6" class="text-center text-muted">Belum ada pesanan 😔</td></tr>`;
+                    tbodyDiambil.innerHTML = `<tr><td colspan="6" class="text-center text-muted">Belum ada pesanan diambil</td></tr>`;
+                    return;
+                }
+
+                pesanan.forEach((p, i) => {
+                    console.log(p);
+
+                    const nomor = String(i + 1).padStart(3, "0");
+                    const status = p.status || "Baru";
+                    const pembeli = p.nama_siswa || "-";
+                    const waktu = p.tanggal || "-";
+                    const total = (p.total ? "Rp " + p.total.toLocaleString("id-ID") : "-");
+
+                    if (status === "Dibatalkan") return;
+
+                    const btnDetail = `<button class="btn btn-info btn-sm detail" data-id="${p.id}" data-bs-toggle="modal" data-bs-target="#exampleModal">Detail</button>`;
+
+                    let btnAksi = "";
+                    if (status === "Baru") btnAksi = `<button class="btn btn-success btn-sm terima" data-id="${p.id}">Ambil Pesanan</button>`;
+                    // else if (status === "Diambil") btnAksi = `<button class="btn btn-success btn-sm selesai" data-id="${p.id}">Selesai</button>`;
+
+                    const row = `
+                <tr data-id="${p.id}">
+                    <th>${p.id}</th>
+                    <td>${pembeli}</td>
+                    <td>${waktu}</td>
+                    <td>${total}</td>
+                    <td class="${statusClass(status)}">${status}</td>
+                    <td>${btnDetail} ${btnAksi}</td>
+                </tr>
+            `;
+
+                    if (status === "Baru") tbodySemua.insertAdjacentHTML("beforeend", row);
+                    else tbodyDiambil.insertAdjacentHTML("beforeend", row);
+                });
+
+                if (tbodySemua.innerHTML.trim() === "") tbodySemua.innerHTML = `<tr><td colspan="6" class="text-center text-muted">Tidak ada pesanan baru</td></tr>`;
+                if (tbodyDiambil.innerHTML.trim() === "") tbodyDiambil.innerHTML = `<tr><td colspan="6" class="text-center text-muted">Tidak ada pesanan diambil</td></tr>`;
+            }
+
+            renderTables();
+
+            // ======================= EVENT HANDLERS =======================
+            document.addEventListener("click", function (e) {
+                // Ambil Pesanan → jadi Diproses
+                if (e.target.classList.contains("terima")) {
+                    const id = e.target.dataset.id;
+                    const idx = pesanan.findIndex(p => p.id == id);
+                    if (idx === -1) return;
+
+                    if (confirm("Ambil pesanan ini? Status akan menjadi Diproses.")) {
+                        pesanan[idx].status = "Diproses";
+                        pesanan[idx].kurir = username;
+                        savePesanan();
+                        renderTables();
+                        alert("Pesanan berhasil anda proses.");
+                        tabTrigger.show(); // pindah ke tab Diambil
+                    }
+                }
+
+                // Sudah diambil → jadi Diambil
+                if (e.target.classList.contains("ambil")) {
+                    const id = e.target.dataset.id;
+                    const idx = pesanan.findIndex(p => p.id == id);
+                    if (idx === -1) return;
+
+                    if (confirm("Pesanan sudah diambil dari penjual?")) {
+                        pesanan[idx].status = "Diambil";
+                        savePesanan();
+                        renderTables();
+                        alert("Pesanan sudah diambil dari penjual.");
+                    }
+                }
+
+                // Pesanan selesai → jadi Selesai
+                if (e.target.classList.contains("selesai")) {
+                    const id = e.target.dataset.id;
+                    const idx = pesanan.findIndex(p => p.id == id);
+                    if (idx === -1) return;
+
+                    if (confirm("Tandai pesanan ini selesai?")) {
+                        pesanan[idx].status = "Selesai";
+                        pesanan[idx].waktu_selesai = new Date().toISOString();
+                        savePesanan();
+                        renderTables();
+                        alert("Pesanan telah selesai.");
+                    }
+                }
+
+                // Detail pesanan
+                if (e.target.classList.contains("detail")) {
+                    const id = e.target.dataset.id;
+                    const p = pesanan.find(x => x.id == id);
+                    if (!p) return;
+
+                    const status = p.status || "Baru";
+                    modalHeader.textContent = `Nomor Pesanan: ${id}`;
+                    modalStatusBadge.textContent = status;
+
+                    modalStatusBadge.className = "badge rounded-pill fs-6";
+                    if (status === "Diproses") modalStatusBadge.classList.add("text-bg-warning");
+                    else if (status === "Selesai") modalStatusBadge.classList.add("text-bg-success");
+                    else if (status === "Baru") modalStatusBadge.classList.add("text-bg-primary");
+                    else if (status === "Dibatalkan") modalStatusBadge.classList.add("text-bg-danger");
+                    else if (status === "Diambil") modalStatusBadge.classList.add("text-bg-info");
+
+                    let html = `<div class="container my-4">
+                <div class="row mb-2"><div class="col-5 fw-semibold">Pembeli</div><div class="col-5 fw-semibold">${p.nama_siswa || "-"}</div></div>
+                <div class="row mb-2"><div class="col-5 fw-semibold">Waktu</div><div class="col-5 fw-semibold">${p.tanggal || "-"}</div></div>
+                <table class="table table-striped table-hover mt-3">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Foto</th>
+                            <th>Nama</th>
+                            <th>Lokasi</th>
+                            <th>Harga Asli</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Subtotal</th>
+                            <th>Keuntungan</th>
+                        </tr>
+                    </thead>                    
+                    <tbody>`;
+
+                    let total_keuntungan = 0;
+                    if (p.items && p.items.length) {
+                        p.items.forEach((item, i) => {
+                            console.log(item);
+
+                            const subtotal = (item.harga || 0) * (item.jumlah || 0);
+                            let keuntungan = (Number(item.harga) - Number(item.harga_asli)) * Number(item.jumlah);
+                            total_keuntungan += keuntungan;
+                            html += `<tr>
+                        <th>${i + 1}</th>
+                        <td><img src="${item.foto}" style="width:50px" class="img-fluid rounded"></td>
+                        <td>${item.nama}</td>
+                        <td>${item.lokasi || "-"}</td>
+                        <td>Rp.${(item.harga_asli || 0).toLocaleString("id-ID")}</td>
+                        <td>Rp.${(item.harga || 0).toLocaleString("id-ID")}</td>
+                        <td>${item.jumlah || 0}</td>
+                        <td>Rp.${subtotal.toLocaleString("id-ID")}</td>
+                        <td>Rp.${keuntungan}</td>
+                    </tr>`;
+                        });
+                    } else {
+                        html += `<tr><td colspan="7" class="text-center text-muted">Tidak ada item</td></tr>`;
+                    }
+
+                    html += `</tbody></table></div>`;
+                    modalBody.innerHTML = html;
+
+                    let footerHTML = `<b style="font-size: 24px;">Total Semua : Rp.${(p.total || 0).toLocaleString("id-ID")} | Keuntungan : Rp.${total_keuntungan.toLocaleString("id-ID")}</b>`;
+                    if (status === "Baru") footerHTML += ` <button class="btn btn-success terima" data-id="${p.id}">Ambil Pesanan</button>`;
+                    // if (status === "Diambil") footerHTML += ` <button class="btn btn-success selesai" data-id="${p.id}">Selesai</button>`;
+                    modalFooter.innerHTML = footerHTML;
+                }
+
+                // Logout
+                if (e.target.id === "logoutBtn") {
+                    localStorage.removeItem("username");
+                    localStorage.removeItem("role");
+                    window.location.href = "../login/index.html";
+                }
+            });
+
+            // Sinkronisasi antar tab jika localStorage berubah
+            window.addEventListener("storage", function (e) {
+                if (e.key === "pesanan") {
+                    pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+                    renderTables();
+                }
+            });
+        });
+
+        const loginBtn = $(".btn-login");
+        const logoutBtn = $(".btn-logout");
+        const cartBtn = $("#cartButton");
+        const pesananSayaBtn = $("nav#navmenu a:contains('Pesanan Saya')");
+
+        function updateLoginUI() {
+            if (localStorage.getItem("isLoggedIn")) {
+                loginBtn.hide();
+                logoutBtn.show();
+                pesananSayaBtn.show();
+                $(".btn-keranjang").show();
+            } else {
+                loginBtn.show();
+                logoutBtn.hide();
+                pesananSayaBtn.hide();
+                $(".btn-keranjang").hide();
+            }
+        }
+
+        updateLoginUI();
+
+        logoutBtn.on("click", function (e) {
+            e.preventDefault();
+            localStorage.removeItem("isLoggedIn");
+            alert("Anda berhasil logout!");
+            updateLoginUI();
+        });
+
+
+    </script>
+
+    <style>
+        /* =========================
+   RESPONSIVE TAB STYLE (FINAL)
+   ========================= */
+
+        /* --- Laptop/Desktop (≥993px) --- */
+        @media (min-width: 993px) {
+            #myTab {
+                justify-content: start;
+                border-bottom: 2px solid #dee2e6;
+            }
+        }
+
+        /* --- Tablet (≤992px) --- */
+        @media (max-width: 992px) {
+            #myTab {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                border: none;
+                margin-bottom: 1rem;
+            }
+
+            #myTab .nav-item {
+                flex: 1 1 45%;
+                text-align: center;
+            }
+
+            #myTab .nav-link {
+                width: 100%;
+                font-size: 15px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                background-color: #fff;
+                color: #333;
+                padding: 10px 8px;
+                white-space: normal;
+                /* teks bisa turun baris */
+                word-wrap: break-word;
+                transition: all 0.2s ease;
+            }
+
+            #myTab .nav-link.active {
+                background-color: #0d6efd;
+                color: white;
+                border-color: #0d6efd;
+            }
+
+            .tab-content {
+                margin-top: 1rem;
+            }
+
+            .tab-content .table {
+                font-size: 14px;
+            }
+
+            .tab-content .table th,
+            .tab-content .table td {
+                padding: 8px 6px;
+            }
+        }
+
+        /* --- Handphone (≤576px) --- */
+        @media (max-width: 576px) {
+            #myTab {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+            }
+
+            #myTab .nav-item {
+                flex: 1 1 100%;
+                width: 100%;
+            }
+
+            #myTab .nav-link {
+                display: block;
+                width: 100%;
+                font-size: 15px;
+                text-align: center;
+                padding: 12px 10px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                background-color: #fff;
+                color: #333;
+                white-space: normal;
+                /* biar teks turun baris */
+                word-wrap: break-word;
+                /* potong teks panjang */
+            }
+
+            #myTab .nav-link.active {
+                background-color: #0d6efd;
+                color: white;
+            }
+
+            /* Pastikan tabel tidak menyebabkan scroll horizontal */
+            .tab-content {
+                overflow-x: hidden;
+                /* tidak ada scroll horizontal */
+            }
+
+            .tab-content .table {
+                width: 100%;
+                min-width: unset;
+                /* hilangkan batas lebar minimal */
+                table-layout: auto;
+                /* kolom menyesuaikan */
+                word-wrap: break-word;
+            }
+
+            .tab-content .table th,
+            .tab-content .table td {
+                font-size: 13px;
+                padding: 8px 5px;
+                white-space: normal;
+                /* teks bisa turun baris */
+            }
+
+            .tab-content .btn {
+                font-size: 12px;
+                padding: 4px 6px;
+            }
+
+            .modal-body table {
+                font-size: 13px;
+            }
+
+            .modal-footer {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .modal-footer b {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+
+</body>
+
+</html>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>PERUT SMANSASOO</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="MAEM.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Yummy
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between"
+      style="flex-direction: row;">
+
+      <a href=" index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename" style="font-size: 3vw;">PERUT SMANSASOO</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home<br></a></li>
+          <li><a href="index.html#menu">Menu</a></li>
+          <li><a href="index.html#events">Kantin</a></li>
+          <li><a href="siswa.html" class="active">Pesanan Saya</a></li>
+          <li><a class="btn-getstarted" href="">Logout</a></li>
+          <li><a class="btn-getstarted" href="../login/index.html">Login</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <button id="cartButton"
+        class="btn-getstarted position-relative rounded-circle px-3 py-2 border border-0 btn-keranjang"
+        style="background-color: #842A3B;" data-bs-toggle="modal" data-bs-target="#modalKeranjang">
+        <i class="bi bi-cart"></i>
+        <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+          style="background-color: #B6771D!important;">
+          0
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+
+
+    </div>
+  </header>
+  <div class="container section-title">
+    <h2 style="margin-top: 3rem;">Pesanan Saya</h2>
+    <p><span>Lihat</span> <span class="description-title">Pesanan Saya</span></p>
+  </div>
+  <main class="main">
+    <div class="container" style="margin-top: 1rem; margin-bottom: 5rem;">
+
+      <div class="card shadow">
+        <div class="card-body" style="margin-bottom: 9rem;">
+          <table class="table table-pesanan-saya">
+            <thead>
+              <tr>
+                <th scope="col">Nomor Pesanan</th>
+                <th scope="col">Waktu</th>
+                <th scope="col">Total</th>
+                <th scope="col">Kurir</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data akan diisi oleh JS dari localStorage -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Detail Pesanan -->
+    <div class="modal fade" id="modalPesanan" tabindex="-1" aria-labelledby="modalPesananLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-xxl-down">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex justify-content-between w-100">
+              <h2 class="mb-0 fw-bold text-dark">Nomor Pesanan: -</h2>
+              <div>
+                <span class="badge rounded-pill fs-6 bg-secondary">Status</span>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <!-- Injected by JS -->
+          </div>
+          <div class="modal-footer fixed-bottom bg-white">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Keranjang -->
+    <div class="modal fade" id="modalKeranjang" tabindex="-1" aria-labelledby="modalKeranjangLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-xxl-down">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="fw-bold">Keranjang Saya</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped align-middle">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Foto</th>
+                  <th>Nama</th>
+                  <th>Harga</th>
+                  <th>Jumlah</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Diisi oleh JS -->
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer ">
+            <b>Total Semua: Rp.<span class="show-total">0</span></b>
+            <button class="btn btn-primary btn-pesan">Pesan Sekarang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4>Alamat</h4>
+            <p>Jalan R. Akhmad Basuni No.361, </p>
+            <p>Dalmon Utara, Japan, Sooko, Mojokerto, Jawa Timur 61361</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contact</h4>
+            <p>
+              <strong>Telp:</strong> <span>(0321) 322637</span><br>
+              <strong>Email:</strong> <span>info@sman1sooko.sch.id</span><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Senin-Jumat:</strong> <br><span>09.55-10.20 <br> 11.35-12.20</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="https://twitter.com/search?q=%23SMANSASOO&src=hashtag_click&f=user" target="_blank"
+              class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/sman1sooko/?locale=ar_AR" target="_blank" class="facebook"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/humassman1sooko/reels/?__d=dist" target="_blank" class="instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://sman1sooko.sch.id/" target="_blank" class="linkedin"><i class="bi bi-building"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SMANSASOO</strong> <span>Build With ❤ by dod &
+          ces</span></p>
+      <div class="credits">
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+  <script src="jquery.js"></script>
+
+  <style>
+    /* ===============================
+     RESPONSIVE STYLE
+     =============================== */
+
+    /* 🌐 Untuk tablet (max-width: 992px) */
+    @media (max-width: 992px) {
+
+      /* Header */
+      .header .sitename {
+        font-size: 1.2rem;
+      }
+
+      .btn-getstarted {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+      }
+
+      .navmenu ul {
+        gap: 0.5rem;
+      }
+
+      /* Table responsive */
+      .table {
+        font-size: 0.9rem;
+      }
+
+      .table th,
+      .table td {
+        white-space: nowrap;
+      }
+
+      /* Bungkus tabel agar bisa scroll horizontal */
+      .card-body {
+        overflow-x: auto;
+      }
+    }
+
+    /* 📱 Untuk handphone (max-width: 768px) */
+    @media (max-width: 768px) {
+
+      /* Header logo lebih kecil */
+      .sitename {
+        font-size: 1rem;
+      }
+
+      /* Ubah posisi tombol login & cart ke atas agar tidak tumpang tindih */
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      /* Nav menu menyesuaikan */
+      .navmenu ul {
+        flex-direction: column;
+        gap: 0.3rem;
+        background: white;
+        border-radius: 10px;
+        padding: 0.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Table agar tidak melebar ke kanan */
+      .card-body {
+        overflow-x: auto;
+      }
+
+      .table {
+        font-size: 0.8rem;
+        min-width: 600px;
+        /* agar bisa scroll tapi teks tetap utuh */
+      }
+
+      /* Teks heading di halaman pesanan */
+      .section-title h2 {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .section-title p {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      /* Modal full screen tampil rapi */
+      .modal-header h2 {
+        font-size: 1rem;
+      }
+
+      .modal-body table {
+        font-size: 0.8rem;
+      }
+
+      /* Tombol di modal */
+      .modal-footer b {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+
+  <script>
+
+    $(document).ready(function () {
+      // === AMBIL DATA DARI JSON ===
+      $.getJSON("data_menu.json", function (data) {
+        // 1️⃣ Dapatkan daftar kategori unik
+        let kategoriList = [...new Set(data.map(item => item.kategori))];
+
+        // 2️⃣ Tampilkan kategori dalam tab navigasi
+        let tabsHTML = kategoriList.map((kategori, index) => `
+      <li class="nav-item">
+        <a class="nav-link ${index === 0 ? "active show" : ""}" 
+           data-bs-toggle="tab" 
+           data-kategori="${kategori}">
+          <h4>${kategori}</h4>
+        </a>
+      </li>
+    `).join("");
+        $(".kategori-tabs").html(tabsHTML);
+
+        // 3️⃣ Fungsi untuk render menu berdasarkan kategori
+        function tampilkanMenu(kategori) {
+          let filteredMenu = data.filter(item => item.kategori === kategori);
+          let show_menu = "";
+
+          filteredMenu.forEach(item => {
+            show_menu += `
+          <div class="col-6 col-lg-4 menu-item">
+            <a href="menu/${item.foto}" class="glightbox">
+              <img src="menu/${item.foto}" class="menu-img img-fluid" alt="${item.nama}">
+            </a>
+            <h4>${item.nama}</h4>
+            <h3>${item.tempat}</h3>
+            <p class="price">Rp.${item.harga_jual}</p>
+            <button type="button" class="btn btn-sm btn-danger">
+              <i class="bi bi-plus" style="font-size: 18px;"></i>
+            </button>
+          </div>
+        `;
+          });
+
+
+          $("#menu-starters .row").html(show_menu);
+        }
+
+        // 4️⃣ Tampilkan kategori pertama saat pertama kali
+        tampilkanMenu(kategoriList[0]);
+
+        // 5️⃣ Event saat kategori di klik
+        $(document).on("click", ".kategori-tabs .nav-link", function () {
+          $(".kategori-tabs .nav-link").removeClass("active show");
+          $(this).addClass("active show");
+
+          let kategoriDipilih = $(this).data("kategori");
+          tampilkanMenu(kategoriDipilih);
+        });
+      }).fail(function () {
+        $("#menu-starters .row").html("<p style='color:red'>Gagal memuat data menu!</p>");
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+
+      // =========================
+      // LOGIN / LOGOUT / PESANAN / KERANJANG
+      // =========================
+      const loginBtn = $("nav#navmenu a.btn-getstarted:contains('Login')");
+      const logoutBtn = $("nav#navmenu a.btn-getstarted:contains('Logout')");
+      const cartBtn = $("#cartButton");
+      const pesananSayaBtn = $("nav#navmenu a:contains('Pesanan Saya')");
+
+      function updateLoginUI() {
+        if (localStorage.getItem("isLoggedIn")) {
+          loginBtn.hide();
+          logoutBtn.show();
+          pesananSayaBtn.show();
+        } else {
+          loginBtn.show();
+          logoutBtn.hide();
+          pesananSayaBtn.hide();
+        }
+      }
+
+      updateLoginUI();
+
+      logoutBtn.on("click", function (e) {
+        e.preventDefault();
+        localStorage.removeItem("isLoggedIn");
+        alert("Anda berhasil logout!");
+        updateLoginUI();
+      });
+
+
+
+      // =========================
+      // KERANJANG
+      // =========================
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let total = 0;
+
+      function saveCart() {
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      function updateCart() {
+        let tbody = $("#modalKeranjang .modal-body tbody"); // ✅ selektor spesifik
+        tbody.empty();
+        total = 0;
+
+        cart.forEach((item, index) => {
+          let subtotal = item.harga * item.jumlah;
+          total += subtotal;
+
+          tbody.append(`
+          <tr>
+            <th scope="row">${index + 1}</th>
+            <td><img src="${item.foto}" class="img-fluid rounded" style="width: 50px;"></td>
+            <td>${item.nama}</td>
+            <td><input type="number" class="harga form-control" value="${item.harga}" readonly></td>
+            <td><input class="jumlah form-control text-center" type="number" value="${item.jumlah}" min="1" data-nama="${item.nama}"></td>
+            <td><input type="number" class="subtotal form-control" value="${subtotal}" readonly></td>
+            <td><button class="btn btn-sm btn-outline-danger hapus-item" data-nama="${item.nama}"><i class="bi bi-trash"></i></button></td>
+          </tr>
+        `);
+        });
+
+        $(".show-total").text(total.toLocaleString());
+
+        const totalItems = cart.reduce((sum, item) => sum + item.jumlah, 0);
+        const badge = $(".cart-count");
+        badge.text(totalItems > 99 ? "99+" : totalItems);
+        $("#cart-badge.badge").text(cart.length);
+        saveCart();
+      }
+
+      // Tambah item ke keranjang
+      $(document).on("click", ".menu-item .btn-danger", function () {
+        if (!localStorage.getItem("isLoggedIn")) {
+          alert("Silakan login terlebih dahulu untuk menambahkan ke keranjang!");
+          return;
+        }
+
+        let parent = $(this).closest(".menu-item");
+        let nama = parent.find("h4").text();
+        let harga = Number(parent.find(".price").text().replace(/[^\d]/g, ""));
+        let foto = parent.find("img").attr("src");
+
+        let existingItem = cart.find(item => item.nama === nama);
+        if (existingItem) {
+          existingItem.jumlah += 1;
+        } else {
+          cart.push({ nama, harga, foto, jumlah: 1 });
+        }
+
+        updateCart();
+      });
+
+      // Ubah jumlah item di modal
+      $(document).on("keyup change", ".jumlah", function () {
+        let nama = $(this).data("nama");
+        let newJumlah = Number($(this).val());
+        let item = cart.find(i => i.nama === nama);
+        if (item) item.jumlah = newJumlah > 0 ? newJumlah : 1;
+        updateCart();
+      });
+
+      // Hapus item dari keranjang
+      $(document).on("click", ".hapus-item", function () {
+        let nama = $(this).data("nama");
+        cart = cart.filter(item => item.nama !== nama);
+        updateCart();
+      });
+
+      // =========================
+      // TOMBOL PESAN
+      // =========================
+      $(document).on("click", ".btn-primary", function () {
+        if (!localStorage.getItem("isLoggedIn")) {
+          alert("Silakan login terlebih dahulu!");
+          window.location.href = "../login/index.html";
+          return;
+        }
+
+        if (cart.length === 0) {
+          alert("Keranjang masih kosong!");
+          return;
+        }
+
+        let pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+        let tanggal = new Date();
+        let namaSiswa = localStorage.getItem("username") || "Anonim"; // Ambil nama dari localStorage (diasumsikan disimpan saat login)
+
+        // Pesanan baru statusnya "Baru"
+        let pesananBaru = {
+          id: Date.now(),
+          tanggal: tanggal.toLocaleString("id-ID"),
+          nama_siswa: namaSiswa, // Tambahkan nama pemesan di sini
+          items: cart,
+          total: cart.reduce((sum, item) => sum + (item.harga * item.jumlah), 0),
+          status: "Baru",
+          kurir: null // nanti diisi saat kurir menerima
+        };
+
+        pesanan.push(pesananBaru);
+        localStorage.setItem("pesanan", JSON.stringify(pesanan));
+
+        cart = [];
+        localStorage.removeItem("cart");
+        updateCart();
+
+        $("#exampleModal").modal("hide");
+        alert("Pesanan baru berhasil dibuat! Status: BARU");
+      });
+
+      updateCart();
+
+      // =========================
+      // TAMPILKAN PESANAN SAYA
+      // =========================
+      function renderPesananSaya() {
+        const tbody = $(".table-pesanan-saya tbody");
+        tbody.empty();
+        const pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+
+        pesanan.forEach((p, i) => {
+          let badgeColor = (p.status === "Baru") ? "bg-primary" :
+            (p.status === "Diproses") ? "bg-warning" :
+              (p.status === "Selesai") ? "bg-success" :
+                (p.status === "Dibatalkan") ? "bg-danger" : "";
+
+          let actionButtons = `<button class="btn btn-info btn-sm detail me-2" data-id="${p.id}" data-bs-toggle="modal" data-bs-target="#modalPesanan">Detail</button>`;
+
+          if (p.status === "Baru") {
+            actionButtons += `<button class="btn btn-danger btn-sm batalkan" data-id="${p.id}">Batalkan</button>`;
+          } else if (p.status === "Diproses") {
+            actionButtons += `<button class="btn btn-success btn-sm terima" data-id="${p.id}">Terima</button>`;
+          }
+
+          tbody.append(`
+            <tr>
+              <td>${p.id}</td>
+              <td>${p.tanggal}</td>
+              <td>Rp ${p.total.toLocaleString()}</td>
+              <td>${p.kurir ? p.kurir : '-'}</td>
+              <td><span class="badge ${badgeColor}">${p.status}</span></td>
+              <td>${actionButtons}</td>
+            </tr>
+          `);
+        });
+      }
+
+
+      // Saat tombol “Terima Kurir” ditekan → ubah status jadi “Diproses”
+      $(document).on("click", ".terima-kurir", function () {
+        const id = $(this).data("id");
+        let pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+        let index = pesanan.findIndex(p => p.id == id);
+
+        if (index !== -1) {
+          pesanan[index].status = "Diproses";
+          pesanan[index].kurir = "Kurir A"; // bisa diganti sesuai sistem login kurir nanti
+          localStorage.setItem("pesanan", JSON.stringify(pesanan));
+          alert("Pesanan telah diterima oleh kurir. Status: DIPROSES");
+          renderPesananSaya();
+        }
+      });
+
+      // Jalankan fungsi jika ada tabel pesanan di halaman
+      if ($("table tbody").length) {
+        renderPesananSaya();
+      }
+
+
+
+      // Tombol Batalkan → ubah status menjadi "Dibatalkan"
+      $(document).on("click", ".batalkan", function () {
+        const id = $(this).data("id");
+        let pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+        let index = pesanan.findIndex(p => p.id == id);
+
+        if (index !== -1) {
+          pesanan[index].status = "Dibatalkan";
+          localStorage.setItem("pesanan", JSON.stringify(pesanan));
+          alert("Pesanan dibatalkan!");
+          renderPesananSaya();
+        }
+      });
+
+      // Tombol Terima → ubah status menjadi "Selesai"
+      $(document).on("click", ".terima", function () {
+        const id = $(this).data("id");
+        let pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+        let index = pesanan.findIndex(p => p.id == id);
+
+        if (index !== -1) {
+          pesanan[index].status = "Selesai";
+          localStorage.setItem("pesanan", JSON.stringify(pesanan));
+          alert("Pesanan selesai diterima!");
+          renderPesananSaya();
+        }
+      });
+
+
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // ======================= ELEMENTS =======================
+      const modalPesanan = document.querySelector("#modalPesanan");
+      const modalHeader = modalPesanan.querySelector(".modal-header h2");
+      const modalStatusBadge = modalPesanan.querySelector(".modal-header .badge");
+      const modalBody = modalPesanan.querySelector("#modalPesanan .modal-body");
+      const modalFooter = modalPesanan.querySelector(".modal-footer");
+
+
+      // Ambil pesanan dari localStorage
+      let pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+
+      // Event listener untuk klik
+      document.addEventListener("click", function (e) {
+        // Detail pesanan (disalin dan disesuaikan dari kurir)
+        if (e.target.classList.contains("detail")) {
+          const id = e.target.dataset.id;
+          const p = pesanan.find(x => x.id == id);
+          if (!p) return;
+
+          const status = p.status || "Baru";
+          modalHeader.textContent = `Nomor Pesanan: ${id}`;
+          modalStatusBadge.textContent = status;
+
+          modalStatusBadge.className = "badge rounded-pill fs-6";
+          if (status === "Diproses") modalStatusBadge.classList.add("text-bg-warning");
+          else if (status === "Selesai") modalStatusBadge.classList.add("text-bg-success");
+          else if (status === "Baru") modalStatusBadge.classList.add("text-bg-primary");
+          else if (status === "Dibatalkan") modalStatusBadge.classList.add("text-bg-danger");
+          else if (status === "Diambil") modalStatusBadge.classList.add("text-bg-info");
+
+          let html = `<div class="container my-4">
+                <div class="row mb-2"><div class="col-5 fw-semibold">Waktu</div><div class="col-5 fw-semibold">${p.tanggal || "-"}</div></div>
+                <div class="row mb-2"><div class="col-5 fw-semibold">Kurir</div><div class="col-5 fw-semibold">${p.kurir || "-"}</div></div>
+                <table class="table table-striped table-hover mt-3">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Foto</th>
+                            <th>Nama</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>                    
+                    <tbody>`;
+
+          if (p.items && p.items.length) {
+            p.items.forEach((item, i) => {
+              const subtotal = (item.harga || 0) * (item.jumlah || 0);
+              html += `<tr>
+                        <th>${i + 1}</th>
+                        <td><img src="${item.foto}" style="width:50px" class="img-fluid rounded"></td>
+                        <td>${item.nama}</td>
+                        <td>Rp.${(item.harga || 0).toLocaleString("id-ID")}</td>
+                        <td>${item.jumlah || 0}</td>
+                        <td>Rp.${subtotal.toLocaleString("id-ID")}</td>
+                    </tr>`;
+            });
+          } else {
+            html += `<tr><td colspan="6" class="text-center text-muted">Tidak ada item</td></tr>`;
+          }
+
+          html += `</tbody></table></div>`;
+          modalBody.innerHTML = html;
+
+          let footerHTML = `<b style="font-size: 24px;">Total Semua : Rp.${(p.total || 0).toLocaleString("id-ID")}</b>`;
+          // if (status === "Baru") footerHTML += ` <button class="btn btn-danger batalkan" data-id="${p.id}">Batalkan</button>`;
+          // if (status === "Diproses") footerHTML += ` <button class="btn btn-success terima" data-id="${p.id}">Terima</button>`;
+          modalFooter.innerHTML = footerHTML;
+        }
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
