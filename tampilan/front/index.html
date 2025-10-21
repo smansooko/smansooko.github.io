@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>PERUT SMANSASOO</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="MAEM.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Yummy
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename" style="font-size: 3vw;">PERUT SMANSASOO</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero" class="active">Home<br></a></li>
+          <li><a href="index.html#menu">Menu</a></li>
+          <li><a href="index.html#events">Kantin</a></li>
+          <li><a href="siswa.html">Pesanan Saya</a></li>
+          <li><a class="btn-getstarted" href="">Logout</a></li>
+          <li><a class="btn-getstarted" href="../login/index.html">Login</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <button id="cartButton"
+        class="btn-getstarted position-relative rounded-circle px-3 py-2 border border-0 btn-keranjang"
+        style="background-color: #842A3B;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="bi bi-cart"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+          style="background-color: #B6771D!important;">
+          99+
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <div class="container">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">PERUT SMANSASOO</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Pengen makan enak dari kantin tanpa harus antri? Gak perlu
+              khawatir, "Perut Smansasoo" siap bantu!🍔🍕🚗</p>
+            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+              <a href="#menu" class="btn-get-started">Ayo Beli</a>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <img src="MAEM.png" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <!-- Why Us Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section dark-background">
+
+      <img src="jajan.jpeg" alt="" data-aos="fade-in">
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Kantin</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Menu</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Siswa</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Kurir</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Menu Kantin</h2>
+        <p><span>Lihat</span> <span class="description-title">Menu Kantin</span></p>
+      </div><!-- End Section Title -->
+
+      <div class="container mb-3" data-aos="fade-up" data-aos-delay="50">
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <input type="text" id="searchMenu" class="form-control form-control-lg" placeholder="Cari menu...">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+
+        <ul class="nav nav-tabs d-flex justify-content-center kategori-tabs" data-aos="fade-up" data-aos-delay="100">
+
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+              <h4>Starters</h4>
+            </a>
+          </li>
+          <!-- End tab nav item -->
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div id="menu-starters" class="menu-content">
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Starters</h3>
+            </div>
+
+            <div class="row gy-5 tempat-menu">
+
+              <div class="col-6 col-lg-4 menu-item">
+                <a href="mangan/pastel.png" class="glightbox" ><img src="mangan/pastel.png"
+                    class="menu-img img-fluid mb-0" alt=""></a>
+                <h4>Pastel Ayam </h4>
+                <h3>Kantin Kecil</h3>
+                <p class="ingredients">
+                </p>
+                <p class="price">
+                  Rp.2.300
+                </p>
+                <button type="button" class="btn btn-sm btn-danger"><i class="bi bi-plus"
+                    style="font-size: 18px;"></i></button>
+              </div><!-- Menu Item -->
+
+              <!-- Menu Item -->
+            </div>
+          </div><!-- End Starter Menu Content -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Menu Section -->
+
+    <div class="swiper-pagination"></div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Events Section -->
+    <section id="events" class="events section">
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/Bu\ anis.jpeg)">
+              <h3>Warung Siomay Bandung bu Anis</h3>
+              <p class="description">
+                Kantin Kecil
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/bu\ titik.jpeg)">
+              <h3> Warung Jus bu Titik</h3>
+              <p class="description">
+                Kantin Kecil
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/kebab.jpeg)">
+              <h3>Warung Kebab</h3>
+              <p class="description">
+                Kantin Kecil
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/berkah.jpeg)">
+              <h3>Warung Berkah</h3>
+              <p class="description">
+                Kantin Kecil
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/yanti.jpeg)">
+              <h3>Warung bu Yanti</h3>
+              <p class="description">
+                Kantin Kecil
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/yuk\ rek.jpeg)">
+              <h3>Warung Jajan yuk rek</h3>
+              <p class="description">
+                Kantin Kecil
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/momo.jpeg)">
+              <h3>Warung mbak Momo</h3>
+              <p class="description">
+                Kantin Besar
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/adi.jpeg)">
+              <h3>Warung bu Adi</h3>
+              <p class="description">
+                Kantin Besar
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/tika.jpeg)">
+              <h3>Warung bu Tika</h3>
+              <p class="description">
+                Kantin Besar
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/didit.jpeg)">
+              <h3>Warung pak Didit</h3>
+              <p class="description">
+                Kantin Besar
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/mbak\ nia.jpeg)">
+              <h3>Warung Bakso mbak Nia BMM</h3>
+              <p class="description">
+                Kantin Besar
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-position: center; background-image: url(kantin/pojok.jpeg)">
+              <h3>Warung Pojok</h3>
+              <p class="description">
+                Kantin Besar
+              </p>
+            </div><!-- End Event item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Events Section -->
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4>Alamat</h4>
+            <p>Jalan R. Akhmad Basuni No.361, </p>
+            <p>Dalmon Utara, Japan, Sooko, Mojokerto, Jawa Timur 61361</p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contact</h4>
+            <p>
+              <strong>Telp:</strong> <span>(0321) 322637</span><br>
+              <strong>Email:</strong> <span>info@sman1sooko.sch.id</span><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Senin-Jumat:</strong> <br><span>09.55-10.20 <br> 11.35-12.20</span>
+              <!-- <strong>Sunday</strong>: <span>Closed</span> -->
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="https://twitter.com/search?q=%23SMANSASOO&src=hashtag_click&f=user" target="_blank"
+              class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/sman1sooko/?locale=ar_AR" target="_blank" class="facebook"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/humassman1sooko/reels/?__d=dist" target="_blank" class="instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://sman1sooko.sch.id/" target="_blank" class="linkedin"><i class="bi bi-building"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SMANSASOO</strong> <span>Build With ❤ by dod &
+          ces</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xxl-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Keranjang</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table table table-striped table-hover" style="margin-bottom: 5rem;">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Foto</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Harga</th>
+                <th scope="col">Jumlah</th>
+                <th scope="col">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td> <img src="mangan/pastel.png" alt="" class="img-fluid rounded" style="width: 50px;"></td>
+                <td>Pastel Usus</td>
+                <td><input type="number" class="harga form-control" value="2000" readonly></td>
+                <td><input class="jumlah form-control" type="text" step="1"></td>
+                <td><input type="number" class="subtotal form-control" readonly></td>
+
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td> <img src="mangan/pastel.png" alt="" class="img-fluid rounded" style="width: 50px;"></td>
+                <td>Pastel Usus</td>
+                <td>2.000</td>
+                <td>1</td>
+                <td>2.000</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td> <img src="mangan/pastel.png" alt="" class="img-fluid rounded" style="width: 50px;"></td>
+                <td>Pastel Usus</td>
+                <td>2.000</td>
+                <td>1</td>
+                <td>2.000</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+
+
+        <div class="modal-footer fixed-bottom" style="background-color: white;">
+          <input type="hidden" class="total">
+
+
+          <b style="font-size: 36px;">Rp. <span class="show-total">
+            </span></b>
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button> -->
+          <button type="button" class="btn btn-primary">Pesan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="jquery.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      // === AMBIL DATA DARI JSON ===
+      $.getJSON("data_menu.json", function (data) {
+        // 1️⃣ Dapatkan daftar kategori unik
+        let kategoriList = [...new Set(data.map(item => item.kategori))];
+
+        // 2️⃣ Tampilkan kategori dalam tab navigasi
+        let tabsHTML = kategoriList.map((kategori, index) => `
+      <li class="nav-item">
+        <a class="nav-link ${index === 0 ? "active show" : ""}" 
+           data-bs-toggle="tab" 
+           data-kategori="${kategori}">
+          <h4>${kategori}</h4>
+        </a>
+      </li>
+    `).join("");
+        $(".kategori-tabs").html(tabsHTML);
+
+        // 3️⃣ Fungsi untuk render menu berdasarkan kategori
+        function tampilkanMenu(kategori) {
+          let filteredMenu = data.filter(item => item.kategori === kategori);
+          let show_menu = "";
+
+          filteredMenu.forEach(item => {
+            show_menu += `
+          <div class="col-6 col-lg-4 menu-item">
+            <a href="menu/${item.foto}" class="glightbox">
+              <img src="menu/${item.foto}" class="menu-img img-fluid" alt="${item.nama}">
+            </a>
+            <h4>${item.nama}</h4>
+            <h3>${item.tempat}</h3>
+            <p class="price">Rp.${item.harga_jual}</p>
+            <p class="harga-asli d-none">${item.harga_asli}</p>
+
+            <button type="button" class="btn btn-sm btn-danger">
+              <i class="bi bi-plus" style="font-size: 18px;"></i>
+            </button>
+          </div>
+        `;
+          });
+
+          $("#menu-starters .row").html(show_menu);
+        }
+
+        // 4️⃣ Tampilkan kategori pertama saat pertama kali
+        tampilkanMenu(kategoriList[0]);
+
+        // 5️⃣ Event saat kategori di klik
+        $(document).on("click", ".kategori-tabs .nav-link", function () {
+          $(".kategori-tabs .nav-link").removeClass("active show");
+          $(this).addClass("active show");
+
+          let kategoriDipilih = $(this).data("kategori");
+          tampilkanMenu(kategoriDipilih);
+        });
+      }).fail(function () {
+        $("#menu-starters .row").html("<p style='color:red'>Gagal memuat data menu!</p>");
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+
+      // =========================
+      // LOGIN / LOGOUT / PESANAN / KERANJANG
+      // =========================
+      const loginBtn = $("nav#navmenu a.btn-getstarted:contains('Login')");
+      const logoutBtn = $("nav#navmenu a.btn-getstarted:contains('Logout')");
+      const cartBtn = $("#cartButton");
+      const pesananSayaBtn = $("nav#navmenu a:contains('Pesanan Saya')");
+
+      function updateLoginUI() {
+        if (localStorage.getItem("isLoggedIn")) {
+          loginBtn.hide();
+          logoutBtn.show();
+          pesananSayaBtn.show();
+          $(".btn-keranjang").show();
+        } else {
+          loginBtn.show();
+          logoutBtn.hide();
+          pesananSayaBtn.hide();
+          $(".btn-keranjang").hide();
+        }
+      }
+
+      updateLoginUI();
+
+      logoutBtn.on("click", function (e) {
+        e.preventDefault();
+        localStorage.removeItem("isLoggedIn");
+        alert("Anda berhasil logout!");
+        updateLoginUI();
+      });
+
+
+      // =========================
+      // KERANJANG
+      // =========================
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let total = 0;
+
+      function saveCart() {
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      function updateCart() {
+        let tbody = $(".modal-body tbody");
+        tbody.empty();
+        total = 0;
+
+        cart.forEach((item, index) => {
+          let subtotal = item.harga * item.jumlah;
+          total += subtotal;
+
+          tbody.append(`
+        <tr>
+          <th scope="row">${index + 1}</th>
+          <td><img src="${item.foto}" class="img-fluid rounded" style="width: 50px;"></td>
+          <td>${item.nama}</td>
+          <td><input type="number" class="harga form-control" value="${item.harga}" readonly></td>
+          <td><input class="jumlah form-control text-center" type="number" value="${item.jumlah}" min="1" data-nama="${item.nama}"></td>
+          <td><input type="number" class="subtotal form-control" value="${subtotal}" readonly></td>
+          <td><button class="btn btn-sm btn-outline-danger hapus-item" data-nama="${item.nama}"><i class="bi bi-trash"></i></button></td>
+        </tr>
+      `);
+        });
+
+        $(".total").val(total);
+        $(".show-total").text(total.toLocaleString());
+        $(".badge").text(cart.length);
+
+        saveCart();
+      }
+
+      // Tambah item ke keranjang
+      $(document).on("click", ".menu-item .btn-danger", function () {
+        if (!localStorage.getItem("isLoggedIn")) {
+          alert("Silakan login terlebih dahulu untuk menambahkan ke keranjang!");
+          return;
+        }
+
+        let parent = $(this).closest(".menu-item");
+        let nama = parent.find("h4").text();
+        let harga = Number(parent.find(".price").text().replace(/[^\d]/g, ""));
+        let harga_asli = Number(parent.find(".harga-asli").text().replace(/[^\d]/g, ""));
+        let foto = parent.find("img").attr("src");
+        let lokasi = parent.find("h3").text();
+
+        let existingItem = cart.find(item => item.nama === nama);
+        if (existingItem) {
+          existingItem.jumlah += 1;
+        } else {
+          cart.push({ nama, harga, foto, jumlah: 1, lokasi, harga_asli });
+        }
+
+        updateCart();
+      });
+
+      // Ubah jumlah item di modal
+      $(document).on("keyup change", ".jumlah", function () {
+        let nama = $(this).data("nama");
+        let newJumlah = Number($(this).val());
+        let item = cart.find(i => i.nama === nama);
+        if (item) item.jumlah = newJumlah > 0 ? newJumlah : 1;
+        updateCart();
+      });
+
+      // Hapus item dari keranjang
+      $(document).on("click", ".hapus-item", function () {
+        let nama = $(this).data("nama");
+        cart = cart.filter(item => item.nama !== nama);
+        updateCart();
+      });
+
+      // =========================
+      // TOMBOL PESAN
+      // =========================
+      $(document).on("click", ".btn-primary", function () {
+        if (!localStorage.getItem("isLoggedIn")) {
+          alert("Silakan login terlebih dahulu!");
+          window.location.href = "../login/index.html";
+          return;
+        }
+
+        if (cart.length === 0) {
+          alert("Keranjang masih kosong!");
+          return;
+        }
+
+        let pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+        let tanggal = new Date();
+
+        // Pesanan baru statusnya "Baru"
+        let pesananBaru = {
+          id: Date.now(),
+          tanggal: tanggal.toLocaleString("id-ID"),
+          items: cart,
+          total: cart.reduce((sum, item) => sum + (item.harga * item.jumlah), 0),
+          status: "Baru",
+          nama_siswa: "(" + localStorage.getItem("kelas") + ")" + localStorage.getItem("username"),
+          kurir: null // nanti diisi saat kurir menerima
+        };
+
+        pesanan.push(pesananBaru);
+        localStorage.setItem("pesanan", JSON.stringify(pesanan));
+
+        cart = [];
+        localStorage.removeItem("cart");
+        updateCart();
+
+        $("#exampleModal").modal("hide");
+        alert("Pesanan baru berhasil dibuat! Status: BARU");
+      });
+
+      updateCart();
+
+      // =========================
+      // TAMPILKAN PESANAN SAYA
+      // =========================
+      function renderPesananSaya() {
+        // const tbody = $("table tbody");
+        tbody.empty();
+        const pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+
+        pesanan.forEach((p, i) => {
+          let badgeColor = (p.status === "Baru") ? "bg-warning" : "bg-success";
+          tbody.append(`
+        <tr>
+          <td>${p.id}</td>
+          <td>${p.tanggal}</td>
+          <td>Rp ${p.total.toLocaleString()}</td>
+          <td>${p.kurir ? p.kurir : '-'}</td>
+          <td><span class="badge ${badgeColor}">${p.status}</span></td>
+        
+        </tr>
+      `);
+        });
+      }
+
+      // Saat tombol “Terima Kurir” ditekan → ubah status jadi “Diproses”
+      $(document).on("click", ".terima-kurir", function () {
+        const id = $(this).data("id");
+        let pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
+        let index = pesanan.findIndex(p => p.id == id);
+
+        if (index !== -1) {
+          pesanan[index].status = "Diproses";
+          pesanan[index].kurir = "Kurir A"; // bisa diganti sesuai sistem login kurir nanti
+          localStorage.setItem("pesanan", JSON.stringify(pesanan));
+          alert("Pesanan telah diterima oleh kurir. Status: DIPROSES");
+          renderPesananSaya();
+        }
+      });
+
+      // Jalankan fungsi jika ada tabel pesanan di halaman
+      if ($("table tbody").length) {
+        renderPesananSaya();
+      }
+
+
+    });
+
+    $(document).ready(function () {
+      $.getJSON("data_menu.json", function (data) {
+        let kategoriList = [...new Set(data.map(item => item.kategori))];
+
+        // Tampilkan kategori
+        let tabsHTML = kategoriList.map((kategori, index) => `
+      <li class="nav-item">
+        <a class="nav-link ${index === 0 ? "active show" : ""}" 
+           data-bs-toggle="tab" 
+           data-kategori="${kategori}">
+          <h4>${kategori}</h4>
+        </a>
+      </li>
+    `).join("");
+        $(".kategori-tabs").html(tabsHTML);
+
+        function tampilkanMenu(kategori, keyword = "") {
+          let filteredMenu = data.filter(item =>
+            item.kategori === kategori &&
+            item.nama.toLowerCase().includes(keyword.toLowerCase())
+          );
+
+          let show_menu = "";
+          filteredMenu.forEach(item => {
+            show_menu += `
+          <div class="col-6 col-lg-4 menu-item">
+          
+              <img src="menu/${item.foto}" class="menu-img img-fluid" alt="${item.nama}">
+          
+            <h4>${item.nama}</h4>
+            <h3>${item.tempat}</h3>
+            <p class="price">Rp.${item.harga_jual}</p>
+            <p class="harga-asli d-none">${item.harga_asli}</p>
+
+            <button type="button" class="btn btn-sm btn-danger">
+              <i class="bi bi-plus" style="font-size: 18px;"></i>
+            </button>
+          </div>
+        `;
+
+          });
+
+          $("#menu-starters .row").html(show_menu);
+
+          // Jika tidak ada menu, tampilkan pesan
+          if (show_menu === "") {
+            $("#menu-starters .row").html("<p style='color:red'>Menu tidak ditemukan!</p>");
+          }
+        }
+
+        // Tampilkan kategori pertama saat pertama kali
+        tampilkanMenu(kategoriList[0]);
+
+        // Event klik kategori
+        $(document).on("click", ".kategori-tabs .nav-link", function () {
+          $(".kategori-tabs .nav-link").removeClass("active show");
+          $(this).addClass("active show");
+          let kategoriDipilih = $(this).data("kategori");
+          let keyword = $("#searchMenu").val();
+          tampilkanMenu(kategoriDipilih, keyword);
+        });
+
+        // Event search
+        $("#searchMenu").on("keyup", function () {
+          let keyword = $(this).val();
+          let kategoriAktif = $(".kategori-tabs .nav-link.active").data("kategori");
+          tampilkanMenu(kategoriAktif, keyword);
+        });
+
+      }).fail(function () {
+        $("#menu-starters .row").html("<p style='color:red'>Gagal memuat data menu!</p>");
+      });
+    });
+
+  </script>
+
+
+<style>
+    /* Latar belakang gelap fullscreen */
+    .zoom-overlay {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .zoom-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .zoom-overlay .close-zoom {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .zoom-overlay.show {
+      display: flex;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <div class="zoom-overlay" id="zoomOverlay">
+    <span class="close-zoom">&times;</span>
+    <img id="zoomImage" src="" alt="">
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      let scrollPos = 0;
+
+      // Klik gambar → buka zoom fullscreen
+      $(document).on("click", ".menu-item img", function () {
+        const src = $(this).attr("src");
+        scrollPos = $(window).scrollTop(); // simpan posisi scroll
+        $("#zoomImage").attr("src", src);
+        $("#zoomOverlay").addClass("show");
+        $("body").css("overflow", "hidden"); // nonaktifkan scroll di belakang
+      });
+
+      // Tutup zoom (klik X atau klik luar gambar)
+      $("#zoomOverlay, .close-zoom").on("click", function (e) {
+        if (e.target !== $("#zoomImage")[0]) {
+          $("#zoomOverlay").removeClass("show");
+          $("body").css("overflow", "auto");
+          $(window).scrollTop(scrollPos); // kembalikan posisi scroll
+        }
+      });
+    });
+  </script>
+  
+
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #2B2F47, #DF504B);
+  padding: 10px;
+}
+
+.kotak {
+  position: relative;
+  width: 850px;
+  max-width: 100%;
+  height: 550px;
+  max-height: 100%;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-box {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #fff;
+  z-index: 1;
+  text-align: center;
+}
+
+.kotak h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.input-box {
+  position: relative;
+  margin: 25px 0;
+  width: 100%;
+}
+
+.input-box input,
+.input-box select {
+  width: 100%;
+  padding: 13px 50px 13px 20px;
+  background: #eee;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #666;
+}
+
+.input-box select {
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  height: 48px;
+  background: #BF092F;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #990324;
+}
+
+.btn-ber {
+  display: inline-block;
+  margin-top: 15px;
+  width: 100%;
+  height: 48px;
+  background-color: #990324;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+/* Toggle Box */
+.toogle-box {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #BF092F;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+.toogle-panel h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.toogle-panel h3 {
+  font-size: 18px;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* --- Tablet / layar medium ≤ 992px --- */
+@media (max-width: 992px) {
+  .kotak {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .form-box, .toogle-box {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .kotak h1 {
+    font-size: 32px;
+  }
+
+  .input-box input,
+  .input-box select {
+    font-size: 15px;
+  }
+
+  .toogle-panel h1 {
+    font-size: 26px;
+  }
+
+  .toogle-panel h3 {
+    font-size: 16px;
+  }
+}
+
+/* --- HP / layar kecil ≤ 576px --- */
+@media (max-width: 576px) {
+  .kotak {
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .form-box {
+    padding: 20px;
+  }
+
+  .input-box input,
+  .input-box select {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+
+  .btn, .btn-ber {
+    font-size: 14px;
+    height: 44px;
+  }
+
+  .toogle-panel h1 {
+    font-size: 22px;
+  }
+
+  .toogle-panel h3 {
+    font-size: 14px;
+  }
+}
