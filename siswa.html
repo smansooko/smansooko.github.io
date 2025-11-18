@@ -633,11 +633,18 @@
         let pesanan = JSON.parse(localStorage.getItem("pesanan")) || [];
         let index = pesanan.findIndex(p => p.id == id);
 
-        if (index !== -1) {
-          pesanan[index].status = "Selesai";
-          localStorage.setItem("pesanan", JSON.stringify(pesanan));
-          alert("Pesanan selesai diterima!");
-          renderPesananSaya();
+        if (e.target.classList.contains("selesai")) {
+          const id = e.target.dataset.id;
+          const idx = pesanan.findIndex(p => p.id == id);
+          if (idx === -1) return;
+
+          if (confirm("Tandai pesanan ini selesai?")) {
+            pesanan[idx].status = "Selesai";
+            pesanan[idx].waktu_selesai = new Date().toISOString();
+            savePesanan();
+            renderTables();
+            alert("Pesanan telah selesai.");
+          }
         }
       });
 
