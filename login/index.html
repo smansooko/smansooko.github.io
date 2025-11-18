@@ -39,7 +39,7 @@
           <button type="submit" class="btn">Login</button>
         </div>
         <div>
-          <a href="index.html" class="btn-ber">Kembali ke Beranda</a>
+          <a href="/index.html" class="btn-ber">Kembali ke Beranda</a>
         </div>
       </form>
     </div>
@@ -95,11 +95,11 @@
         localStorage.setItem("nisn", user.nisn);
         localStorage.setItem("password", user.password);
         localStorage.setItem("kelas", user.kelas || "-");
-        
+
 
         // Arahkan ke halaman sesuai level
         if (level === "siswa") {
-          window.location.href = "index.html";
+          window.location.href = "/index.html";
         } else if (level === "kurir") {
           window.location.href = "../kurir.html";
         }
